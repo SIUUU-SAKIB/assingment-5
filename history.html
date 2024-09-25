@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="output.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="max-w-screen-xl  border-slate-400 flex items-start mx-auto px-[50px] py-[80px] flex-col space-y-3">
+      <h1 class="font-extrabold text-[30px] p-12">Important FAQ</h1>
+
+      <div class="px-[20px] py-[40px] border flex flex-col">
+        <div class="p-[20px] text-xl font-semibold">
+          What is Document Object Model (DOM)?
+        </div>
+        <p class="text-base font-semibold">The Document Object Model (DOM) is a programming interface for web documents. It represents the page so that programs can change the document structure, style, and content.</p>
+      </div>
+
+      <div class="px-[20px] py-[40px] border flex flex-col">
+        <div class="p-[20px] text-xl font-semibold">
+          how do you select an element from the DOM?
+        </div>
+        <p class="text-base font-semibold">The getElementById() method of the Document interface returns an Element object representing the element whose id property matches the specified string. Since element IDs are required to be unique if specified, they're a useful way to get access to a specific element quickly.</p>
+      </div>
+
+      <div class="px-[20px] py-[40px] border flex flex-col">
+        <div class="p-[20px] text-xl font-semibold">
+          What is event deletgation in the context of the DOM and it is useful?
+        </div>
+        <p class="text-base font-semibold">Event delegation refers to the process of using event propagation (bubbling) to handle events at a higher level in the DOM than the element on which the event originated. It allows us to attach a single event listener for elements that exist now or in the future.</p>
+      </div>
+      <div class="px-[20px] py-[40px] border flex flex-col">
+        <div class="p-[20px] text-xl font-semibold">
+          how do you manupulate an element's attrubutes and styles using the DOM?
+        </div>
+        <p class="text-base font-semibold">The classList object only provide methods to change the class of an element. If you want to change other attributes like id , href , or src , you can use the setAttribute() method. The setAttribute() method accepts two arguments: The name of the attribute to set.</p>
+      </div>
+
+    </div>
+  </body>
+</html>
