@@ -73,14 +73,13 @@ classELm(`.btn-1`).addEventListener(`click`, () => {
 classELm(`.btn-2`).addEventListener(`click`, () => {
   const input2 = +classELm(`.input-2`).value;
   if (!isNaN(input2) && +input2 > 0) {
-    const labelBal = +labelBalance2 + +input2;
+    const labelBal = +labelBalance1 + +input2;
+    console.log(+labelBal);
     const curBalance = balance - +input2;
-    console.log(curBalance);
-    classELm(`.cur-bal-2`).textContent = labelBal;
-    currentBalance1.textContent = curBalance + ` BDT`;
+    classELm(`.cur-bal-1`).textContent = labelBal;
+    classELm(`.current-bal-1`).textContent = curBalance + ` BDT`;
     popUpModal.classList.remove(`hidden`);
     classELm(`.input-2`).value = ``;
-
     const html = `
     <div class="message py-4 border flex items-start justify-center flex-col  px-10 space-y-4">
 <h1 class="font-bold text-lg">${input2} Taka is Donated for flood at Feni-2024 Bangladesh</h1>
