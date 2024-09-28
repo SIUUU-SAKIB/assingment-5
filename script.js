@@ -16,8 +16,8 @@ const labelBalance1 = +classELm(`.cur-bal-1`).textContent;
 const labelBalance2 = +classELm(`.cur-bal-2`).textContent;
 const labelBalance3 = +classELm(`.cur-bal-3`).textContent;
 let balance = 20000;
-let pushBal = [];
-
+let pushBal = 0
+console.log(pushBal)
 const currentBalance2 = parseFloat(
   document.querySelector(`.current-bal-2`).textContent
 );
@@ -60,11 +60,11 @@ classELm(`.btn-1`).addEventListener(`click`, () => {
   const input1 = +classELm(`.input-1`).value;
   if (!isNaN(input1) && +input1 > 0) {
     const labelBal = +labelBalance1 + +input1;
-    console.log(+labelBal);
-    const curBalance = balance - +input1;
+    balance = balance - +input1;
+    console.log(pushBal)
     classELm(`.cur-bal-1`).textContent = labelBal;
-    classELm(`.current-bal-1`).textContent = curBalance + ` BDT`;
-    classELm(`.current-bal-2`).textContent = curBalance + ` BDT`;
+    classELm(`.current-bal-1`).textContent = +balance + ` BDT`;
+    classELm(`.current-bal-2`).textContent = +balance + ` BDT`;
     popUpModal.classList.remove(`hidden`);
     classELm(`.input-1`).value = ``;
 
@@ -82,10 +82,10 @@ classELm(`.btn-2`).addEventListener(`click`, () => {
   if (!isNaN(input2) && +input2 > 0) {
     const labelBal = +labelBalance1 + +input2;
     console.log(+labelBal);
-    const curBalance = balance - +input2;
+    balance = balance - +input2;
     classELm(`.cur-bal-1`).textContent = labelBal;
-    classELm(`.current-bal-1`).textContent = curBalance + ` BDT`;
-    classELm(`.current-bal-2`).textContent = curBalance + ` BDT`;
+    classELm(`.current-bal-1`).textContent = +balance + ` BDT`;
+    classELm(`.current-bal-2`).textContent = +balance + ` BDT`;
     popUpModal.classList.remove(`hidden`);
     classELm(`.input-2`).value = ``;
     const html = `
@@ -101,11 +101,11 @@ classELm(`.btn-3`).addEventListener(`click`, () => {
   const input3 = +classELm(`.input-3`).value;
   if (!isNaN(input3) && +input3 > 0) {
     const labelBal = +labelBalance3 + +input3;
-    const curBalance = balance - +input3;
-    console.log(curBalance);
+    balance = balance - +input3;
+   console.log(pushBal)
     classELm(`.cur-bal-2`).textContent = labelBal;
-    classELm(`.current-bal-1`).textContent = curBalance + ` BDT`;
-    classELm(`.current-bal-2`).textContent = curBalance + ` BDT`;
+    classELm(`.current-bal-1`).textContent = +balance + ` BDT`;
+    classELm(`.current-bal-2`).textContent = +balance + ` BDT`;
     popUpModal.classList.remove(`hidden`);
     classELm(`.input-3`).value = ``;
 
