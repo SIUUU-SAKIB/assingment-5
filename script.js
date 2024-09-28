@@ -28,12 +28,18 @@ openBtn.addEventListener("click", (e) => {
   modal.style.trasnition = `0.5s`;
   openBtn.style.display = `none`;
   closeBtn.style.display = `block`;
+  document.querySelectorAll(`.uni`).forEach(e => {
+    e.style.visibility = `hidden`
+  })
 });
 
 closeBtn.addEventListener("click", (e) => {
   modal.style.display = `none`;
   openBtn.style.display = `block`;
   closeBtn.style.display = `none`;
+  document.querySelectorAll(`.uni`).forEach(e => {
+    e.style.visibility = `visible`
+  })
 });
 // hamburger ////////////////
 historyBtn.addEventListener(`click`, (e) => {
@@ -58,6 +64,7 @@ classELm(`.btn-1`).addEventListener(`click`, () => {
     const curBalance = balance - +input1;
     classELm(`.cur-bal-1`).textContent = labelBal;
     classELm(`.current-bal-1`).textContent = curBalance + ` BDT`;
+    classELm(`.current-bal-2`).textContent = curBalance + ` BDT`;
     popUpModal.classList.remove(`hidden`);
     classELm(`.input-1`).value = ``;
 
@@ -78,6 +85,7 @@ classELm(`.btn-2`).addEventListener(`click`, () => {
     const curBalance = balance - +input2;
     classELm(`.cur-bal-1`).textContent = labelBal;
     classELm(`.current-bal-1`).textContent = curBalance + ` BDT`;
+    classELm(`.current-bal-2`).textContent = curBalance + ` BDT`;
     popUpModal.classList.remove(`hidden`);
     classELm(`.input-2`).value = ``;
     const html = `
@@ -97,6 +105,7 @@ classELm(`.btn-3`).addEventListener(`click`, () => {
     console.log(curBalance);
     classELm(`.cur-bal-2`).textContent = labelBal;
     classELm(`.current-bal-1`).textContent = curBalance + ` BDT`;
+    classELm(`.current-bal-2`).textContent = curBalance + ` BDT`;
     popUpModal.classList.remove(`hidden`);
     classELm(`.input-3`).value = ``;
 
@@ -119,6 +128,6 @@ blog.forEach((e) => {
   console.log(e)
   e.addEventListener(`click`, () => {
     console.log(`noj`);
-    window.location.href = `http://127.0.0.1:5500/history.html`;
+    window.location.href = `https://66f8045c51454fd90f9fa868--incandescent-churros-110126.netlify.app/`;
   });
 });
